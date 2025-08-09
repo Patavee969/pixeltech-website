@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelTectSoft</title>
+    <link href="https://fonts.googleapis.com/css2?family=Trajan+Pro:wght@400;700&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-text">PixelTech Soft</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="game-selection" id="game-selection">
+        <div class="selection-bg"></div>
+        <div class="selection-content">
+            <h1 class="selection-title" data-th="เข้าสู่อาณาจักร" data-en="Enter The Kingdom">Enter The Kingdom</h1>
+            <div class="game-showcase">
+                <div class="game-slot" data-game="ayutthaya">
+                    <div class="game-showcase-image">
+                        <img src="Showcase.JPG" alt="Game Showcase" class="showcase-bg">
+                        <div class="game-overlay">
+                            <img src="Logo.png" alt="The Shadow Of Ayutthaya" class="game-logo">
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h2 class="game-title" data-th="เงาแห่งอยุธยา" data-en="THE SHADOW OF AYUTTHAYA">เงาแห่งอยุธยา</h2>
+                        <p class="game-description" data-th="เกมที่จะพาคุณผจญภัยไปกับโลกโบราณในสมัยอยุทธยาที่มีทั้งเหล่าตัวร้ายและสิ่งน่าเหลือเชื่ออีกมากมาย จง! ใช้! เงา! เป็น! อาวุธ!!" data-en="A game that will take you on an adventure to the ancient world of Ayutthaya filled with villains and incredible supernatural beings. Use! The! Shadow! As! Your! Weapon!!">เกมที่จะพาคุณผจญภัยไปกับโลกโบราณในสมัยอยุทธยาที่มีทั้งเหล่าตัวร้ายและสิ่งน่าเหลือเชื่ออีกมากมาย จง! ใช้! เงา! เป็น! อาวุธ!!</p>
+                        <button class="play-btn" data-th="เข้าสู่อาณาจักร" data-en="ENTER THE KINGDOM">เข้าสู่อาณาจักร</button>
+                    </div>
+                </div>
+                
+                <div class="game-slot" data-game="trk">
+                    <div class="game-showcase-image">
+                        <img src="TRK/Showcase.jpg" alt="T.R.K Record Showcase" class="showcase-bg">
+                        <div class="game-overlay">
+                            <div class="game-title-overlay">T.R.K</div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h2 class="game-title" data-th="T.R.K Record" data-en="T.R.K Record">T.R.K Record</h2>
+                        <p class="game-description" data-th="เกมยิงมุมมองบุคคลที่หนึ่งแนว Body Cam Shooter ที่จะพาคุณเข้าสู่ภารกิจสุดระทึก" data-en="First-person Body Cam Shooter that takes you into thrilling tactical missions">เกมยิงมุมมองบุคคลที่หนึ่งแนว Body Cam Shooter ที่จะพาคุณเข้าสู่ภารกิจสุดระทึก</p>
+                        <button class="play-btn" data-th="เข้าสู่ภารกิจ" data-en="ENTER MISSION">เข้าสู่ภารกิจ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-site" id="main-site" style="display: none;">
+    <div class="cursor"></div>
+    <div class="particles"></div>
+    <div class="floating-elements">
+        <div class="floating-element" style="--delay: 0s; --duration: 15s;">⚔️</div>
+        <div class="floating-element" style="--delay: 3s; --duration: 18s;">🏛️</div>
+        <div class="floating-element" style="--delay: 6s; --duration: 12s;">👑</div>
+        <div class="floating-element" style="--delay: 9s; --duration: 20s;">🐉</div>
+        <div class="floating-element" style="--delay: 12s; --duration: 16s;">⚡</div>
+    </div>
+    
+    <header class="header">
+        <div class="logo">
+            <span class="logo-text">PixelTech Soft</span>
+        </div>
+        <nav class="nav">
+            <a href="#home" class="nav-link" data-th="หน้าแรก" data-en="HOME">HOME</a>
+            <a href="#games" class="nav-link" data-th="เกม" data-en="GAMES">GAMES</a>
+            <a href="#news" class="nav-link" data-th="ข่าวสาร" data-en="NEWS">NEWS</a>
+            <a href="about.html" class="nav-link" data-th="เกี่ยวกับเรา" data-en="ABOUT" onclick="window.location.href='about.html'">ABOUT</a>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="th">TH</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-bg" style="background-image: url('Envaronment1.jpg');"></div>
+            <div class="hero-content">
+                <h1 class="hero-title" data-th="เงาแห่งอยุธยา" data-en="THE SHADOW OF AYUTTHAYA">THE SHADOW OF AYUTTHAYA</h1>
+                <p class="hero-subtitle" data-th="อาณาจักรโบราณที่รอการกลับมา" data-en="Ancient Kingdom Awaits Your Return">อาณาจักรโบราณรอการกลับมา</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="showTrailer()" data-th="ดูตัวอย่าง" data-en="WATCH TRAILER">ดูตัวอย่าง</button>
+                    <button class="btn-secondary" onclick="loadGameData()" data-th="สำรวจเกม" data-en="EXPLORE GAMES">สำรวจเกม</button>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <section id="games" class="games-section">
+            <div class="section-header">
+                <h2 class="section-title" data-th="เกมของเรา" data-en="OUR GAMES">เกมของเรา</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="games-grid" id="games-grid"></div>
+        </section>
+
+        <section id="news" class="news-section">
+            <div class="section-header">
+                <h2 class="section-title" data-th="ข่าวล่าสุด" data-en="LATEST NEWS">ข่าวล่าสุด</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="news-container" id="news-container"></div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <h2 class="about-title">เกี่ยวกับเรา</h2>
+                <div class="about-story">
+                    <p class="intro-text">นักพัฒนาเกมไทยที่พัฒนาโดยผู้สร้างคนไทยเพียงสองคน</p>
+                    
+                    <div class="founders">
+                        <div class="founder">
+                            <h3>นาย ปฐวี สุขสมศรี</h3>
+                            <span class="role">เจ้าของ</span>
+                        </div>
+                        <div class="founder">
+                            <h3>นาย เฉลิมพล สุขสมศรี</h3>
+                            <span class="role">ผู้ร่วมก่อตั้ง</span>
+                        </div>
+                    </div>
+                    
+                    <div class="story-text">
+                        <p>เป็นสองพ่อลูกที่เดิมทีชอบเล่นเกมด้วยกันแล้วหันมาพัฒนาเกม โดยเกมแรกที่ทำคือ <strong>เงาแห่งอยุธยา</strong> เป็นเกมที่เน้นบรรยากาศไทยๆในสมัยอยุธยา</p>
+                        
+                        <div class="game-genre">
+                            <span class="genre-tag">แอคชั่น-อาร์พีจี</span>
+                            <span class="genre-tag">โซลส์ไลค์</span>
+                            <span class="genre-tag">วัฒนธรรมไทย</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <h3 data-th="ติดต่อเรา" data-en="Contact Us">Contact Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61567731262273" target="_blank" class="social-link">
+                        <span class="social-icon">📘</span>
+                        <span data-th="Facebook" data-en="Facebook">Facebook</span>
+                    </a>
+                    <a href="https://www.youtube.com/@THESHADOWOFAYUTTHAYA-OFFICIAL" target="_blank" class="social-link">
+                        <span class="social-icon">📺</span>
+                        <span data-th="YouTube" data-en="YouTube">YouTube</span>
+                    </a>
+                </div>
+            </div>
+            <p>&copy; 2024 PixelTech Soft. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="trailer-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <video controls autoplay>
+                <source src="#" type="video/mp4">
+                Game Trailer
+            </video>
+        </div>
+    </div>
+
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
