@@ -97,6 +97,36 @@ async function loadGameData(gameType = 'ayutthaya') {
     loadNews(gameType);
 }
 
+function loadNews(gameType = 'ayutthaya') {
+    if (gameType === 'trk') {
+        if (currentLanguage === 'en') {
+            updateTRKNewsEnglish();
+        } else {
+            updateTRKNewsThai();
+        }
+    } else {
+        if (currentLanguage === 'en') {
+            updateNewsEnglish();
+        } else {
+            updateNewsThai();
+        }
+    }
+}
+
+function updateTRKNewsEnglish() {
+    const news = [
+        { title: 'T.R.K Record Development', date: 'TBA', content: 'Body Cam Shooter in development. Release date TBA.' }
+    ];
+    loadNewsWithData(news);
+}
+
+function updateTRKNewsThai() {
+    const news = [
+        { title: 'T.R.K Record กำลังพัฒนา', date: 'ไม่มีกำหนด', content: 'เกม Body Cam Shooter กำลังพัฒนา เปิดไม่มีกำหนดการ' }
+    ];
+    loadNewsWithData(news);
+}
+
 function displayGames(games, gameType = 'ayutthaya') {
     const gamesGrid = document.getElementById('games-grid');
     const showcaseImage = gameType === 'trk' ? 'TRK/Showcase.jpg' : 'Showcase.JPG';
@@ -132,22 +162,7 @@ function displayGames(games, gameType = 'ayutthaya') {
     });
 }
 
-function loadNews() {
-    const newsContainer = document.getElementById('news-container');
-    const news = [
-        { title: 'The Shadow of Ayutthaya Released', date: '2024-01-15', content: 'Journey through the ancient kingdom of Ayutthaya.' },
-        { title: 'New Combat System', date: '2024-01-10', content: 'Experience authentic Thai martial arts combat.' },
-        { title: 'Historical Accuracy', date: '2024-01-05', content: 'Meticulously researched ancient Thai culture.' }
-    ];
-    
-    newsContainer.innerHTML = news.map((item, index) => `
-        <div class="news-item" style="animation-delay: ${index * 0.3}s">
-            <h3>${item.title}</h3>
-            <p class="news-date">${item.date}</p>
-            <p>${item.content}</p>
-        </div>
-    `).join('');
-}
+
 
 // Modal functions
 function showTrailer() {
@@ -306,18 +321,14 @@ function updateGameDataThai() {
 
 function updateNewsEnglish() {
     const news = [
-        { title: 'The Shadow of Ayutthaya Released', date: '2024-01-15', content: 'Journey through the ancient kingdom of Ayutthaya.' },
-        { title: 'New Combat System', date: '2024-01-10', content: 'Experience authentic Thai martial arts combat.' },
-        { title: 'Historical Accuracy', date: '2024-01-05', content: 'Meticulously researched ancient Thai culture.' }
+        { title: 'The Shadow of Ayutthaya Demo', date: '2025-08-31', content: 'Demo version available! Experience the ancient kingdom of Ayutthaya.' }
     ];
     loadNewsWithData(news);
 }
 
 function updateNewsThai() {
     const news = [
-        { title: 'เงาแห่งอยุธยาเปิดตัวแล้ว', date: '2024-01-15', content: 'เดินทางผ่านอาณาจักรอยุธยาโบราณ' },
-        { title: 'ระบบการต่อสู้ใหม่', date: '2024-01-10', content: 'สัมผัสการต่อสู้ศิลปะการต่อสู้ไทยแท้' },
-        { title: 'ความแม่นยำทางประวัติศาสตร์', date: '2024-01-05', content: 'วิจัยวัฒนธรรมไทยโบราณอย่างพิถีพิถัน' }
+        { title: 'เงาแห่งอยุธยา Demo', date: '2025-08-31', content: 'เวอร์ชั่น Demo พร้อมเล่นแล้ว! สัมผัสอาณาจักรอยุธยาโบราณ' }
     ];
     loadNewsWithData(news);
 }
