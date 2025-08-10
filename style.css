@@ -873,8 +873,11 @@ body::after {
 .modal-content {
     position: relative;
     margin: 5% auto;
-    width: 80%;
-    max-width: 800px;
+    width: 90%;
+    max-width: 900px;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .close {
@@ -886,9 +889,20 @@ body::after {
     cursor: pointer;
 }
 
-video {
+#trailer-iframe {
     width: 100%;
-    height: auto;
+    height: 500px;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    #trailer-iframe {
+        height: 300px;
+    }
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
 }
 
 .about-title {

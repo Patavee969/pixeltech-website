@@ -167,12 +167,22 @@ function displayGames(games, gameType = 'ayutthaya') {
 // Modal functions
 function showTrailer() {
     const modal = document.getElementById('trailer-modal');
+    const iframe = document.getElementById('trailer-iframe');
+    
+    // Set YouTube embed URL with autoplay
+    iframe.src = 'https://www.youtube.com/embed/OIYjOjhzKOU?autoplay=1&rel=0';
+    
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
     const modal = document.getElementById('trailer-modal');
+    const iframe = document.getElementById('trailer-iframe');
+    
+    // Stop video by clearing src
+    iframe.src = '';
+    
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
 }
